@@ -1,1 +1,4 @@
-dist
+build
+.idea
+__pycache__
+HighScores.txt
