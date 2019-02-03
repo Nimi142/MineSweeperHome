@@ -143,7 +143,7 @@ def choosedifficulty(self,vDifficulty,event,isRetry):
     global pUnpressed
     global pEmpty
     global pFlagBomb
-    print("Meow!")
+    # print("Meow!")
     HighScoreFile = open("HighScores.txt","r")
     aData = HighScoreFile.readlines()
     if vDifficulty == 0:
@@ -176,13 +176,13 @@ def choosedifficulty(self,vDifficulty,event,isRetry):
     wConfigure.grab_release()
     wLost.grab_release()
     wConfigure.withdraw()
-    print(aBombs)
+    # print(aBombs)
     tStartTime = time.time()
     setboards()
     aHighScores = linecache.getline("HighScores.txt",vDifficulty+1).split(',')
     vHightime = aHighScores[0]
     vHighClicks = aHighScores[1]
-    print(str(aHighScores[0]) + "," + str(aHighScores[1]))
+    # print(str(aHighScores[0]) + "," + str(aHighScores[1]))
     for i in range(0,2):
         aHighScores[i] = float(aHighScores[i])
     lHighScore.configure(text = "Least clicks: " + str(aHighScores[1]) + "\nLeast Time: " + str(round(aHighScores[0],2)))
@@ -193,7 +193,7 @@ def setbombs(vStartBombs,vBoardSize,aForbiddenTiles): # Working
     # returns a list of list of [x,y] parameters for placement.
     aBombs = []
     for i in range (0, vStartBombs):
-        print("A")
+        # print("A")
         x = aForbiddenTiles[0][0]
         y = aForbiddenTiles[0][1]
         while [x,y] in aForbiddenTiles:
@@ -337,7 +337,7 @@ def leftclickbutton(event,isBombSent = False):
             leftclickbomb(self)
     lFlagsLeft.configure(text = "Flags left: " + str(vFlagsLeft))
     checkwin()
-    print("Meow")
+    # print("Meow")
 def leftclickbomb(event):
     global pOne
     global pTwo
@@ -351,7 +351,7 @@ def leftclickbomb(event):
     global pFlagBomb
     global aBomb
     if not isDebug:
-        print("Unready")
+        # print("Unready")
         wLost.deiconify()
         wLost.grab_set()
         # Reveal all:
@@ -391,7 +391,7 @@ def rightclick(event):
     self = dBombs[event.widget]
     a =  re.findall("\d+", self.Button['image'])
     a = int(a[0])
-    print(a)
+    # print(a)
     if isStart:
         if self.isFlag:
             self.isFlag = False
@@ -498,9 +498,9 @@ def won():
     aData[vDifficulty] = str(aHighScores[0]) + "," + str(aHighScores[1]) + '\n'
     lHighScore.configure(text = "Least clicks: " + str(aHighScores[1]) + "\nLeast Time: " + str(round(aHighScores[0])))
     lHighScore.pack()
-    print("Unready")
+    # print("Unready")
     w = open("HighScores.txt","w")
-    print(aData)
+    # print(aData)
     w.writelines(aData)
 # Setting wLost:
 bPlayLost = Button(wLost,text = "Play again!", command = resetboard)
@@ -535,7 +535,7 @@ bDiffExpert.pack(side = LEFT)
 # setting Board:
 fGame.pack(side = LEFT)
 fInfo.pack(side = LEFT)
-print(aBombs)
+# print(aBombs)
 # Setting fInfo:
 lClicks = Label(fInfo,text = "Clicks: "+str(vClicks))
 lTimePassed = Label(fInfo,text = "Time passed: " + str((time.time() - tStartTime)))
@@ -549,8 +549,6 @@ lHighScore.pack()
 main.after(0,setIsStop())
 start_new_thread(update,(5,))
 main.mainloop()
-def hi():
-    print("hi")
 '''
 import win32api, win32con
 def lClick(x,y):
