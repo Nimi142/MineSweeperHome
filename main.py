@@ -288,7 +288,7 @@ def leftclickbutton(event,isBombSent = False):
                         if vNumBombs == 4:
                             self.Button.configure(image = pFour)
                         if vNumBombs == 5:
-                            self.configure(image = pFive)
+                            self.Button.configure(image = pFive)
                         if vNumBombs == 6:
                             self.configure(image = pSix)
                         if vNumBombs == 7:
