@@ -415,7 +415,7 @@ def middleClick(realself):
     vyPos = realself.yPos
     for i in range(-1,2):
         for j in range(-1,2):
-            if aBoard[vxPos+i][vyPos+j].isFlag:
+            if vxPos+i >= 0 and vyPos+j >= 0 and aBoard[vxPos+i][vyPos+j].isFlag:
                 vCounter += 1
     if vCounter == realself.bombsNear and vxPos+i >= 0 and vyPos+j >= 0:
         for i in range(-1,2):

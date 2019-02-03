@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02724f98-fa0f-44d8-944c-966ab5b73d27" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/MineSweeperHome.zip" beforeDir="false" afterPath="$PROJECT_DIR$/dist/MineSweeperHome.zip" afterDir="false" />
+    <list default="true" id="02724f98-fa0f-44d8-944c-966ab5b73d27" name="Default Changelist" comment="Update workspace.xml">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,14 +37,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="14036" />
+          <entry key="py" value="14113" />
           <entry key="txt" value="118" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="118" />
-          <entry key="Python" value="14036" />
+          <entry key="Python" value="14113" />
         </counts>
       </usages-collector>
     </session>
@@ -56,12 +55,12 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="live-pycharm">
             <state>
-              <first_editor relative-caret-position="171">
-                <caret line="184" column="11" selection-start-line="184" selection-start-column="6" selection-end-line="184" selection-end-column="11" />
+              <first_editor relative-caret-position="137">
+                <caret line="416" column="29" lean-forward="true" selection-start-line="416" selection-start-column="29" selection-end-line="416" selection-end-column="29" />
                 <folding>
                   <element signature="e#339#360#0" expanded="true" />
-                  <marker date="1549233625608" expanded="true" signature="13514:15171" ph="..." />
-                  <marker date="1549233625608" expanded="false" signature="16705:16710" ph="..." />
+                  <marker date="1549234044091" expanded="true" signature="13562:15253" ph="..." />
+                  <marker date="1549234044091" expanded="false" signature="16787:16792" ph="..." />
                 </folding>
               </first_editor>
               <second_editor relative-caret-position="-119" />
@@ -287,7 +286,35 @@
       <option name="project" value="LOCAL" />
       <updated>1549233010508</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update workspace.xml">
+      <created>1549233712452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1549233712452</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update workspace.xml">
+      <created>1549233721766</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1549233721766</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update workspace.xml">
+      <created>1549233827803</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1549233827803</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update workspace.xml">
+      <created>1549233855763</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1549233855763</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -299,12 +326,12 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -326,7 +353,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>497</line>
+          <line>498</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
@@ -544,12 +571,12 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="live-pycharm">
         <state>
-          <first_editor relative-caret-position="171">
-            <caret line="184" column="11" selection-start-line="184" selection-start-column="6" selection-end-line="184" selection-end-column="11" />
+          <first_editor relative-caret-position="137">
+            <caret line="416" column="29" lean-forward="true" selection-start-line="416" selection-start-column="29" selection-end-line="416" selection-end-column="29" />
             <folding>
               <element signature="e#339#360#0" expanded="true" />
-              <marker date="1549233625608" expanded="true" signature="13514:15171" ph="..." />
-              <marker date="1549233625608" expanded="false" signature="16705:16710" ph="..." />
+              <marker date="1549234044091" expanded="true" signature="13562:15253" ph="..." />
+              <marker date="1549234044091" expanded="false" signature="16787:16792" ph="..." />
             </folding>
           </first_editor>
           <second_editor relative-caret-position="-119" />
