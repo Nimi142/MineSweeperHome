@@ -143,6 +143,7 @@ def choosedifficulty(self,vDifficulty,event,isRetry):
     global pUnpressed
     global pEmpty
     global pFlagBomb
+    # Github Thingy
     # print("Meow!")
     HighScoreFile = open("HighScores.txt","r")
     aData = HighScoreFile.readlines()
@@ -416,7 +417,7 @@ def middleClick(realself):
         for j in range(-1,2):
             if aBoard[vxPos+i][vyPos+j].isFlag:
                 vCounter += 1
-    if vCounter == realself.bombsNear:
+    if vCounter == realself.bombsNear and vxPos+i >= 0 and vyPos+j >= 0:
         for i in range(-1,2):
             for j in range(-1,2):
                 self = aBoard[vxPos+i][vyPos+j]
