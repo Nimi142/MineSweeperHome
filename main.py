@@ -422,6 +422,7 @@ def middleClick(realself):
             for j in range(-1,2):
                 self = aBoard[vxPos+i][vyPos+j]
                 if (not self.isFlag):
+                    self.isClicked = True
                     if self.bombsNear == 0:
                         self.Button.configure(image = pEmpty)
                         leftclickbutton(self)
