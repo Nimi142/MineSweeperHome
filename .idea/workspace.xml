@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="02724f98-fa0f-44d8-944c-966ab5b73d27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/main/Analysis-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main/COLLECT-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/main/COLLECT-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/main/EXE-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main/PKG-00.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/main/PKG-00.pkg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/main/PYZ-00.pyz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/main/PYZ-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/main/base_library.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/build/main/main.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main/warn-main.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/main/warn-main.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main/xref-main.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/main/xref-main.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,12 +14,13 @@
     <session id="154860312">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -49,12 +40,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="py" value="15721" />
-          <entry key="txt" value="505" />
+          <entry key="txt" value="530" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="505" />
+          <entry key="PLAIN_TEXT" value="530" />
           <entry key="Python" value="15721" />
         </counts>
       </usages-collector>
@@ -175,7 +166,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="475" />
-    <option name="y" value="187" />
+    <option name="y" value="186" />
     <option name="width" value="980" />
     <option name="height" value="1080" />
   </component>
@@ -348,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549374560544</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Building a few commits">
+      <created>1549376172329</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1549376172329</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -360,7 +358,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -386,7 +384,8 @@
     <MESSAGE value="General update" />
     <MESSAGE value="Showing empty tiles on death (Previously due to a programming mistake they stayed unpressed)" />
     <MESSAGE value="1) Adding a name and a logo to the game.&#10;2) Making middle click show empty tiles (fixing a bug)" />
-    <option name="LAST_COMMIT_MESSAGE" value="1) Adding a name and a logo to the game.&#10;2) Making middle click show empty tiles (fixing a bug)" />
+    <MESSAGE value="Building a few commits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Building a few commits" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -540,22 +539,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Bomb.ppm" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state>
-          <first_editor relative-caret-position="225">
-            <caret line="475" column="49" selection-start-line="475" selection-start-column="49" selection-end-line="475" selection-end-column="49" />
-            <folding>
-              <element signature="e#417#438#0" expanded="true" />
-              <marker date="1549374559871" expanded="true" signature="3244:3245" ph="..." />
-              <marker date="1549374559871" expanded="true" signature="15327:17704" ph="..." />
-              <marker date="1549374559871" expanded="false" signature="19238:19243" ph="..." />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-119" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Python36/Lib/re.py">
       <provider selected="true" editor-type-id="live-pycharm">
         <state>
@@ -593,6 +576,22 @@
             <caret line="1481" selection-start-line="1481" selection-end-line="1481" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="live-pycharm">
+        <state>
+          <first_editor relative-caret-position="225">
+            <caret line="475" column="49" selection-start-line="475" selection-start-column="49" selection-end-line="475" selection-end-column="49" />
+            <folding>
+              <element signature="e#417#438#0" expanded="true" />
+              <marker date="1549374559871" expanded="true" signature="3244:3245" ph="..." />
+              <marker date="1549374559871" expanded="true" signature="15327:17704" ph="..." />
+              <marker date="1549374559871" expanded="false" signature="19238:19243" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor relative-caret-position="-119" />
         </state>
       </provider>
     </entry>
