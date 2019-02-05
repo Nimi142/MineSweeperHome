@@ -1,4 +1,5 @@
 isDebug = False
+vBuild = 0
 '''
 Note:
 f = Frame()
@@ -594,10 +595,12 @@ fGame.pack(side = LEFT,expand = 1,fill = BOTH)
 fInfo.pack(side = LEFT)
 # print(aBombs)
 # Setting fInfo:
+lBuild = Label(fInfo, text="Build: " + str(vBuild))
 lClicks = Label(fInfo,text = "Clicks: "+str(vClicks))
 lTimePassed = Label(fInfo,text = "Time passed: " + str((time.time() - tStartTime)))
 lFlagsLeft = Label(fInfo,text = "flags left: 10")
 lHighScore = Label(fInfo,text = "")
+lBuild.pack()
 lClicks.pack()
 lTimePassed.pack()
 lFlagsLeft.pack()
