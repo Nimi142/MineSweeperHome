@@ -55,6 +55,9 @@ vSide = 50
 
 # Initializing Tk instances:
 main = Tk()
+main.title("MineSweeper Home")
+main.iconbitmap(r'c:images/logo.ico')
+
 # main.attributes("-fullscreen", True)
 
 wConfigure = Toplevel(main)
@@ -457,42 +460,47 @@ def middleClick(realself):
     vyPos = realself.yPos
     for i in range(-1,2):
         for j in range(-1,2):
-            if vxPos+i >= 0 and vyPos+j >= 0 and aBoard[vxPos+i][vyPos+j].isFlag:
-                vCounter += 1
+            if vBoardSize > vxPos + i >= 0 and vBoardSize > vyPos + j >= 0:
+                if aBoard[vxPos + i][vyPos + j].isFlag:
+                    vCounter += 1
     if vCounter == realself.bombsNear and vxPos+i >= 0 and vyPos+j >= 0:
         for i in range(-1,2):
             for j in range(-1,2):
-                self = aBoard[vxPos+i][vyPos+j]
-                if (not self.isFlag):
-                    self.isClicked = True
-                    if self.bombsNear == 1:
-                        self.Button.configure(image=pOne)
-                        self.image = pOne
-                    elif self.bombsNear == 2:
-                        self.Button.configure(image=pTwo)
-                        self.image = pTwo
-                    elif self.bombsNear == 3:
-                        self.Button.configure(image=pThree)
-                        self.image = pThree
-                    elif self.bombsNear == 4:
-                        self.Button.configure(image=pFour)
-                        self.image = pFour
-                    elif self.bombsNear == 5:
-                        self.Button.configure(image=pFive)
-                        self.image = pFive
-                    elif self.bombsNear == 6:
-                        self.Button.configure(image=pSix)
-                        self.image = pSix
-                    elif self.bombsNear == 7:
-                        self.Button.configure(image=pSeven)
-                        self.image = pSeven
-                    elif self.bombsNear == 8:
-                        self.Button.configure(image=pEight)
-                        self.image = pEight
-                    if self.isBomb:
-                        leftclickbomb(self)
-                    if self.isBomb and self.isFlag:
-                        self.Button.configure(image = pFlagBomb)
+                self = aBoard[vxPos + i][vyPos + j]
+                if vBoardSize > self.xPos >= 0 and vBoardSize > self.yPos >= 0:
+                    if (not self.isFlag):
+                        self.isClicked = True
+                        if self.bombsNear == 0:
+                            self.Button.configure(image=pEmpty)
+                            leftclickbutton(self)
+                        elif self.bombsNear == 1:
+                            self.Button.configure(image=pOne)
+                            self.image = pOne
+                        elif self.bombsNear == 2:
+                            self.Button.configure(image=pTwo)
+                            self.image = pTwo
+                        elif self.bombsNear == 3:
+                            self.Button.configure(image=pThree)
+                            self.image = pThree
+                        elif self.bombsNear == 4:
+                            self.Button.configure(image=pFour)
+                            self.image = pFour
+                        elif self.bombsNear == 5:
+                            self.Button.configure(image=pFive)
+                            self.image = pFive
+                        elif self.bombsNear == 6:
+                            self.Button.configure(image=pSix)
+                            self.image = pSix
+                        elif self.bombsNear == 7:
+                            self.Button.configure(image=pSeven)
+                            self.image = pSeven
+                        elif self.bombsNear == 8:
+                            self.Button.configure(image=pEight)
+                            self.image = pEight
+                        if self.isBomb:
+                            leftclickbomb(self)
+                        if self.isBomb and self.isFlag:
+                            self.Button.configure(image=pFlagBomb)
 def resetboard():
     global aBoard
     global aBombs
