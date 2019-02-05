@@ -1,4 +1,10 @@
 isDebug = False
+'''
+Note:
+f = Frame()
+width=f.winfo_reqwidth()
+height=f.winfo_reqheight()
+'''
 patch = \
 '''
 Version = 1.0B
@@ -27,6 +33,7 @@ from PIL import Image, ImageTk
 import random,time,linecache
 from os import stat
 from _thread import start_new_thread
+from math import ceil
 # Create HighScores File:
 try:
     open("HighScores.txt","x")
@@ -48,6 +55,8 @@ vSide = 50
 
 # Initializing Tk instances:
 main = Tk()
+# main.attributes("-fullscreen", True)
+
 wConfigure = Toplevel(main)
 wLost = Toplevel(main)
 wWin = Toplevel(main)
@@ -71,6 +80,7 @@ class Tile:
     yPos = 0
     bombsNear = 0
     isClicked = False
+    image = None
 # Initializing variables:
 vDifficulty = 0
 vStartBombs = 10
@@ -106,6 +116,9 @@ pUnpressed = ImageTk.PhotoImage(Image.open("images/Unpressed.png").resize((vSide
 pFlagBomb = ImageTk.PhotoImage(Image.open("images/FlaggedBomb.png").resize((vSide,vSide), Image.ANTIALIAS))
 
 #Functions:
+def exitfullscreen(event = None):
+    global main
+    main.attributes("-fullscreen",False)
 def  update(a):
     global lTimePassed
     global tStartTime
@@ -213,6 +226,7 @@ def setboards(): # Working
     global fGame
     global fInfo
     vFlagsLeft = vStartBombs
+    height = fGame.winfo_reqheight()
     fGame.destroy()
     fGame = Frame(main)
     aBoard = []
@@ -222,7 +236,7 @@ def setboards(): # Working
             a = Tile()
             a.xPos = i
             a.yPos = j
-            a.Button = Button(fGame,height = vSide, width = vSide,image = pUnpressed)
+            a.Button = Button(fGame,height = height/vBoardSize, width = height/vBoardSize,image = pUnpressed)
             a.Button.bind("<Button-1>",leftclickbutton)
             a.Button.bind("<Button-3>",rightclick)
             a.Button.bind("<Button-2>",middleClick)
@@ -240,10 +254,12 @@ def setboards(): # Working
                     if [j.xPos + x,j.yPos + y] in aBombs:
                         j.bombsNear += 1
     fInfo.pack_forget()
-    fGame.configure(height = vSide*9, width = vSide*9)
-    fGame.pack(side = LEFT)
+    fGame.pack(side = LEFT, expand  = y,anchor = W )
     fInfo.pack(side = RIGHT,anchor = N)
-
+    fGaneheight = fGame.winfo_reqheight()
+    for i in range(0, vBoardSize):
+        for j in range(0, vBoardSize):
+            aBoard[i][j].Button.configure(height = fGaneheight/vBoardSize,width = fGaneheight/vBoardSize)
 
 def leftclickbutton(event,isBombSent = False):
     global vBoardSize
@@ -282,22 +298,31 @@ def leftclickbutton(event,isBombSent = False):
                         vNumBombs = self.bombsNear
                         if vNumBombs == 1:
                             self.Button.configure(image =  pOne)
-                        if vNumBombs == 2:
+                            self.image = pOne
+                        elif vNumBombs == 2:
                             self.Button.configure(image = pTwo)
-                        if vNumBombs == 3:
+                            self.image = pTwo
+                        elif vNumBombs == 3:
                             self.Button.configure(image = pThree)
-                        if vNumBombs == 4:
+                            self.image = pThree
+                        elif vNumBombs == 4:
                             self.Button.configure(image = pFour)
-                        if vNumBombs == 5:
+                            self.image = pFour
+                        elif vNumBombs == 5:
                             self.Button.configure(image = pFive)
-                        if vNumBombs == 6:
+                            self.image = pFive
+                        elif vNumBombs == 6:
                             self.Button.configure(image = pSix)
-                        if vNumBombs == 7:
+                            self.image = pSix
+                        elif vNumBombs == 7:
                             self.Button.configure(image = pSeven)
-                        if vNumBombs == 8:
+                            self.image = pSeven
+                        elif vNumBombs == 8:
                             self.Button.configure(image = pEight)
-                        if vNumBombs == 0:
+                            self.image = pEight
+                        elif vNumBombs == 0:
                             self.Button.configure(image = pEmpty)
+                            self.image = pEmpty
                             # print(pEmpty)
                             if not self.isClicked:
                                 leftclickbutton(self,False)
@@ -315,20 +340,28 @@ def leftclickbutton(event,isBombSent = False):
         self = realself
         if vNumBombs == 1:
             self.Button.configure(image=pOne)
+            self.image = pOne
         elif vNumBombs == 2:
             self.Button.configure(image=pTwo)
+            self.image = pTwo
         elif vNumBombs == 3:
             self.Button.configure(image=pThree)
+            self.image = pThree
         elif vNumBombs == 4:
             self.Button.configure(image=pFour)
+            self.image = pFour
         elif vNumBombs == 5:
             self.Button.configure(image=pFive)
+            self.image = pFive
         elif vNumBombs == 6:
             self.Button.configure(image=pSix)
+            self.image = pSix
         elif vNumBombs == 7:
             self.Button.configure(image=pSeven)
+            self.image = pSeven
         elif vNumBombs == 8:
             self.Button.configure(image=pEight)
+            self.image = pEight
 
         if self.isFlag:
             self.isFlag = False
@@ -360,22 +393,31 @@ def leftclickbomb(event):
             for j in i:
                 if j.bombsNear == 0:
                     j.Button.configure(image = pEmpty)
+                    j.image = pEmpty
                 elif j.bombsNear == 1:
                     j.Button.configure(image=pOne)
+                    j.image = pOne
                 elif j.bombsNear == 2:
                     j.Button.configure(image=pTwo)
+                    j.image = pTwo
                 elif j.bombsNear == 3:
                     j.Button.configure(image=pThree)
+                    j.image = pThree
                 elif j.bombsNear == 4:
                     j.Button.configure(image=pFour)
+                    j.image = pFour
                 elif j.bombsNear == 5:
                     j.Button.configure(image=pFive)
+                    j.image = pFive
                 elif j.bombsNear == 6:
                     j.Button.configure(image=pSix)
+                    j.image = pSix
                 elif j.bombsNear == 7:
                     j.Button.configure(image=pSeven)
+                    j.image = pSeven
                 elif j.bombsNear == 8:
                     j.Button.configure(image=pEight)
+                    j.image = pEight
                 if j.isBomb and j.isFlag:
                     j.Button.configure(image = pFlagBomb)
                 elif j.isBomb:
@@ -423,25 +465,30 @@ def middleClick(realself):
                 self = aBoard[vxPos+i][vyPos+j]
                 if (not self.isFlag):
                     self.isClicked = True
-                    if self.bombsNear == 0:
-                        self.Button.configure(image = pEmpty)
-                        leftclickbutton(self)
-                    elif self.bombsNear == 1:
+                    if self.bombsNear == 1:
                         self.Button.configure(image=pOne)
+                        self.image = pOne
                     elif self.bombsNear == 2:
                         self.Button.configure(image=pTwo)
+                        self.image = pTwo
                     elif self.bombsNear == 3:
                         self.Button.configure(image=pThree)
+                        self.image = pThree
                     elif self.bombsNear == 4:
                         self.Button.configure(image=pFour)
+                        self.image = pFour
                     elif self.bombsNear == 5:
                         self.Button.configure(image=pFive)
+                        self.image = pFive
                     elif self.bombsNear == 6:
                         self.Button.configure(image=pSix)
+                        self.image = pSix
                     elif self.bombsNear == 7:
                         self.Button.configure(image=pSeven)
+                        self.image = pSeven
                     elif self.bombsNear == 8:
                         self.Button.configure(image=pEight)
+                        self.image = pEight
                     if self.isBomb:
                         leftclickbomb(self)
                     if self.isBomb and self.isFlag:
@@ -504,6 +551,8 @@ def won():
     w = open("HighScores.txt","w")
     # print(aData)
     w.writelines(aData)
+# Binding exit full screen
+# main.bind("<Escape>",exitfullscreen)
 # Setting wLost:
 bPlayLost = Button(wLost,text = "Play again!", command = resetboard)
 lLost = Label(wLost,text = "welp: ")
@@ -535,7 +584,7 @@ bDiffIntermediate.pack(side = LEFT)
 bDiffExpert.pack(side = LEFT)
 # Setting main:
 # setting Board:
-fGame.pack(side = LEFT)
+fGame.pack(side = LEFT,expand = 1,fill = BOTH)
 fInfo.pack(side = LEFT)
 # print(aBombs)
 # Setting fInfo:
