@@ -1,5 +1,5 @@
 isDebug = False
-vBuild = 0
+vBuild = 1
 '''
 Note:
 f = Frame()
@@ -461,11 +461,11 @@ def middleClick(realself):
     vyPos = realself.yPos
     for i in range(-1,2):
         for j in range(-1,2):
-            if aBoard[vxPos + i][vyPos + j].isFlag and vBoardSize > i >= 0 and vBoardSize > i >= 0:
+            if aBoard[vxPos + i][vyPos + j].isFlag and vBoardSize > vxPos + i >= 0 and vBoardSize > vyPos + i >= 0:
                 vCounter += 1
     for i in range(-1, 2):
         for j in range(-1, 2):
-            if vBoardSize > vxPos + i >= 0 and vBoardSize > vyPos + j >= 0:
+            if vBoardSize > vxPos + i >= 0 and vBoardSize > vyPos + j >= 0 and vCounter == realself.bombsNear:
                 self = aBoard[vxPos + i][vyPos + j]
                 if (not self.isFlag):
                     self.isClicked = True
