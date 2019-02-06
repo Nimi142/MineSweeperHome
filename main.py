@@ -3,13 +3,13 @@ vBuild = 2
 '''
 Note:
 f = Frame()
-width=f.winfo_reqwidth()
-height=f.winfo_reqheight()
+width=f.winfo_width()
+height=f.winfo_height()
 '''
 patch = \
 '''
 Version = 1.0B
-current: make first click empty.
+I plan on making a thread that checks size evry 0.1 seconds and if size changed then it should resize the widgets
 '''
 '''
 Naming System:
@@ -99,6 +99,7 @@ vFlagsLeft = 0
 aHighScores = []
 vHighClicks = 0
 vHightime = 0
+vWindowSize = 0
 aData = []
 isStart = False
 isRetry = False
@@ -123,6 +124,84 @@ pFlagBomb = ImageTk.PhotoImage(Image.open("images/FlaggedBomb.png").resize((vSid
 def exitfullscreen(event = None):
     global main
     main.attributes("-fullscreen",False)
+
+
+def resize():
+    global main
+    global aBoard
+    global isStop
+    global vWindowSize
+    global fInfo
+    global pOne
+    global pTwo
+    global pThree
+    global pFour
+    global pFive
+    global pSix
+    global pSeven
+    global pEight
+    global pFlag
+    global pBomb
+    global pUnpressed
+    global pEmpty
+    global pFlagBomb
+    height = main.winfo_height()
+    width = main.winfo_width()
+    if height != vWindowSize:
+        if (height + 0.2) > width:
+            main.geometry(("%dX%d" % (height + 0.2, height)))
+        vWindowSize = height
+        vButtonSize = aBoard[0][0].Button.winfo_height()
+        pOne = ImageTk.PhotoImage(Image.open("images/one.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pTwo = ImageTk.PhotoImage(Image.open("images/two.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pThree = ImageTk.PhotoImage(Image.open("images/three.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pFour = ImageTk.PhotoImage(Image.open("images/Four.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pFive = ImageTk.PhotoImage(Image.open("images/Five.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pSix = ImageTk.PhotoImage(Image.open("images/Six.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pSeven = ImageTk.PhotoImage(Image.open("images/Seven.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pEight = ImageTk.PhotoImage(Image.open("images/Eight.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pBomb = ImageTk.PhotoImage(Image.open("images/Bomb.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pFlag = ImageTk.PhotoImage(Image.open("images/Flag.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pEmpty = ImageTk.PhotoImage(Image.open("images/empty.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pUnpressed = ImageTk.PhotoImage(
+            Image.open("images/Unpressed.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        pFlagBomb = ImageTk.PhotoImage(
+            Image.open("images/FlaggedBomb.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
+        for i in aBoard:
+            for self in i:
+                if self.isClicked:
+                    vNumBombs = self.bombsNear
+                    if vNumBombs == 1:
+                        self.Button.configure(image=pOne)
+                        self.image = pOne
+                    elif vNumBombs == 2:
+                        self.Button.configure(image=pTwo)
+                        self.image = pTwo
+                    elif vNumBombs == 3:
+                        self.Button.configure(image=pThree)
+                        self.image = pThree
+                    elif vNumBombs == 4:
+                        self.Button.configure(image=pFour)
+                        self.image = pFour
+                    elif vNumBombs == 5:
+                        self.Button.configure(image=pFive)
+                        self.image = pFive
+                    elif vNumBombs == 6:
+                        self.Button.configure(image=pSix)
+                        self.image = pSix
+                    elif vNumBombs == 7:
+                        self.Button.configure(image=pSeven)
+                        self.image = pSeven
+                    elif vNumBombs == 8:
+                        self.Button.configure(image=pEight)
+                        self.image = pEight
+                    elif vNumBombs == 0:
+                        self.Button.configure(image=pEmpty)
+                        self.image = pEmpty
+                else:
+                    self.Button.configure(image=pUnpressed)
+                self.Button.configure(height=height / (vBoardSize + 1), width=height / (vBoardSize + 1))
+
 def  update(a):
     global lTimePassed
     global tStartTime
@@ -455,10 +534,12 @@ def rightclick(event):
 def middleClick(realself):
     global aBoard
     global dBombs
+    global vClicks
     realself = dBombs[realself.widget]
     vCounter = 0
     vxPos = realself.xPos
     vyPos = realself.yPos
+    vClicks += 1
     for i in range(-1,2):
         for j in range(-1,2):
             if vBoardSize > vxPos + i >= 0 and vBoardSize > vyPos + j >= 0:
@@ -596,19 +677,23 @@ fGame.pack(side = LEFT,expand = 1,fill = BOTH)
 fInfo.pack(side = LEFT)
 # print(aBombs)
 # Setting fInfo:
-lBuild = Label(fInfo, text="Build: " + str(vBuild))
-lClicks = Label(fInfo,text = "Clicks: "+str(vClicks))
-lTimePassed = Label(fInfo,text = "Time passed: " + str((time.time() - tStartTime)))
-lFlagsLeft = Label(fInfo,text = "flags left: 10")
-lHighScore = Label(fInfo,text = "")
-lBuild.pack()
-lClicks.pack()
-lTimePassed.pack()
-lFlagsLeft.pack()
-lHighScore.pack()
+lBuild = Label(fInfo, text="Build: " + str(vBuild), anchor=W)
+lClicks = Label(fInfo, text="Clicks: " + str(vClicks), anchor=W)
+lTimePassed = Label(fInfo, text="Time passed: " + str((time.time() - tStartTime)), anchor=W)
+lFlagsLeft = Label(fInfo, text="flags left: 10", anchor=W)
+lHighScore = Label(fInfo, text="", anchor=W, justify=LEFT)
+bResize = Button(fInfo, text="Resize Board", anchor=W, command=resize)
+lBuild.pack(anchor=W)
+lClicks.pack(anchor=W)
+lTimePassed.pack(anchor=W)
+lFlagsLeft.pack(anchor=W)
+lHighScore.pack(anchor=W)
+bResize.pack(anchor=W)
 #Starting Autofire:
 main.after(0,setIsStop())
+main.after(0, setIsStop())
 start_new_thread(update,(5,))
+print(fInfo.winfo_width())
 main.mainloop()
 '''
 import win32api, win32con

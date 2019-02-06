@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02724f98-fa0f-44d8-944c-966ab5b73d27" name="Default Changelist" comment="Bulding Zip">
+    <list default="true" id="02724f98-fa0f-44d8-944c-966ab5b73d27" name="Default Changelist" comment="Started Beta Testing of the reszing feature">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,13 +15,14 @@
     <session id="154860312">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -40,14 +42,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="16056" />
-          <entry key="txt" value="753" />
+          <entry key="py" value="17384" />
+          <entry key="txt" value="806" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="753" />
-          <entry key="Python" value="16056" />
+          <entry key="PLAIN_TEXT" value="806" />
+          <entry key="Python" value="17384" />
         </counts>
       </usages-collector>
     </session>
@@ -58,16 +60,15 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="live-pycharm">
             <state>
-              <first_editor relative-caret-position="17">
-                <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+              <first_editor relative-caret-position="350">
+                <caret line="146" column="30" selection-start-line="146" selection-start-column="30" selection-end-line="146" selection-end-column="30" />
                 <folding>
-                  <element signature="e#417#438#0" expanded="true" />
-                  <marker date="1549397884906" expanded="true" signature="3255:3256" ph="..." />
-                  <marker date="1549397884906" expanded="true" signature="15338:17535" ph="..." />
-                  <marker date="1549397884906" expanded="false" signature="19069:19074" ph="..." />
+                  <marker date="1549465844028" expanded="true" signature="7128:7129" ph="..." />
+                  <marker date="1549465844028" expanded="true" signature="19211:21444" ph="..." />
+                  <marker date="1549465844028" expanded="false" signature="22978:22983" ph="..." />
                 </folding>
               </first_editor>
-              <second_editor />
+              <second_editor relative-caret-position="-119" />
             </state>
           </provider>
         </entry>
@@ -92,17 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>global pOne</find>
-      <find>.configure(image=</find>
-      <find>print</find>
-      <find>iImage.open(&quot;images/</find>
-      <find>meow</find>
-      <find>fgame</find>
-      <find>fGame</find>
-      <find>vSide</find>
-      <find>height/vBoardSize</find>
-      <find>change</find>
-      <find>fGame.des</find>
       <find>chan</find>
       <find>aBoard</find>
       <find>_tkinter.TclError: unknown option &quot;-class&quot;</find>
@@ -122,6 +112,17 @@
       <find>middle</find>
       <find>stick</find>
       <find>side</find>
+      <find>update</find>
+      <find>resi</find>
+      <find>resize</find>
+      <find>fInfo</find>
+      <find>def res</find>
+      <find>vSide</find>
+      <find>global pO</find>
+      <find>def re</find>
+      <find>bind</find>
+      <find>def Res</find>
+      <find>width</find>
     </findStrings>
     <replaceStrings>
       <replace>changedif</replace>
@@ -147,6 +148,7 @@
       <replace>j.bombsNear</replace>
       <replace>j</replace>
       <replace>self.bombsNear</replace>
+      <replace>vButtonSize</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -167,7 +169,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="475" />
-    <option name="y" value="186" />
+    <option name="y" value="185" />
     <option name="width" value="980" />
     <option name="height" value="1080" />
   </component>
@@ -403,26 +405,33 @@
       <option name="project" value="LOCAL" />
       <updated>1549397416783</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Bulding">
+      <created>1549398037298</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1549398037298</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.122934565" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.122934565" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4990086" visible="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32885906" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5009914" side_tool="true" visible="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -448,7 +457,8 @@
     <MESSAGE value="Adding a &quot;Build&quot; label to help us synchronize. needs to be manually managed" />
     <MESSAGE value="Fixing middleClick flag problems" />
     <MESSAGE value="Bulding Zip" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bulding Zip" />
+    <MESSAGE value="Bulding" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bulding" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -456,12 +466,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>554</line>
+          <line>631</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>464</line>
+          <line>541</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
@@ -645,13 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HighScores.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/main/lib2to3/tests/data/README">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -662,16 +665,22 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="live-pycharm">
         <state>
-          <first_editor relative-caret-position="17">
-            <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <first_editor relative-caret-position="350">
+            <caret line="146" column="30" selection-start-line="146" selection-start-column="30" selection-end-line="146" selection-end-column="30" />
             <folding>
-              <element signature="e#417#438#0" expanded="true" />
-              <marker date="1549397884906" expanded="true" signature="3255:3256" ph="..." />
-              <marker date="1549397884906" expanded="true" signature="15338:17535" ph="..." />
-              <marker date="1549397884906" expanded="false" signature="19069:19074" ph="..." />
+              <marker date="1549465844028" expanded="true" signature="7128:7129" ph="..." />
+              <marker date="1549465844028" expanded="true" signature="19211:21444" ph="..." />
+              <marker date="1549465844028" expanded="false" signature="22978:22983" ph="..." />
             </folding>
           </first_editor>
-          <second_editor />
+          <second_editor relative-caret-position="-119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HighScores.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
