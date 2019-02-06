@@ -10,5 +10,7 @@ This program is testing: Resizing.
 
 If you want a stable (relatively) version of the game go to the releases menu please
 
+BTW the zip file is outdated
+
 I hope you enjoy,
 Nimrod Rappaport.
