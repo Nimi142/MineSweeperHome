@@ -6,7 +6,9 @@ working on: resizing
 This program currently stabely supports:
 Midddle clicking, 1st click empty, showing flagged bombs at the end of games, 3 difficulties.
 
-This program is testing: Resizing and fullscreen capabilities.
+This program is testing: Resizing.
+
+If you want a stable (relatively) version of the game go to the releases menu please
 
 I hope you enjoy,
 Nimrod Rappaport.
