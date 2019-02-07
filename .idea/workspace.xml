@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02724f98-fa0f-44d8-944c-966ab5b73d27" name="Default Changelist" comment="Started Beta Testing of the reszing feature">
+    <list default="true" id="02724f98-fa0f-44d8-944c-966ab5b73d27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -15,14 +15,14 @@
     <session id="154860312">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,14 +42,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="17384" />
-          <entry key="txt" value="806" />
+          <entry key="py" value="17445" />
+          <entry key="txt" value="807" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="806" />
-          <entry key="Python" value="17384" />
+          <entry key="PLAIN_TEXT" value="807" />
+          <entry key="Python" value="17445" />
         </counts>
       </usages-collector>
     </session>
@@ -60,12 +60,11 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="live-pycharm">
             <state>
-              <first_editor relative-caret-position="350">
-                <caret line="146" column="30" selection-start-line="146" selection-start-column="30" selection-end-line="146" selection-end-column="30" />
+              <first_editor relative-caret-position="2775">
+                <caret line="322" column="115" selection-start-line="322" selection-start-column="115" selection-end-line="322" selection-end-column="115" />
                 <folding>
-                  <marker date="1549465844028" expanded="true" signature="7128:7129" ph="..." />
-                  <marker date="1549465844028" expanded="true" signature="19211:21444" ph="..." />
-                  <marker date="1549465844028" expanded="false" signature="22978:22983" ph="..." />
+                  <marker date="1549468426955" expanded="true" signature="19284:21517" ph="..." />
+                  <marker date="1549468426955" expanded="false" signature="23051:23056" ph="..." />
                 </folding>
               </first_editor>
               <second_editor relative-caret-position="-119" />
@@ -93,13 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>chan</find>
-      <find>aBoard</find>
-      <find>_tkinter.TclError: unknown option &quot;-class&quot;</find>
-      <find>class</find>
-      <find>int</find>
-      <find>leftclick</find>
-      <find>`</find>
       <find>vNumBombs</find>
       <find>self</find>
       <find>vNumbombs</find>
@@ -123,6 +115,13 @@
       <find>bind</find>
       <find>def Res</find>
       <find>width</find>
+      <find>leftclick</find>
+      <find>setboards</find>
+      <find>setBoards</find>
+      <find>vBoardSize + 1</find>
+      <find>vBoardSize + 3</find>
+      <find>resize</find>
+      <find>vBoardSize + 20</find>
     </findStrings>
     <replaceStrings>
       <replace>changedif</replace>
@@ -149,6 +148,9 @@
       <replace>j</replace>
       <replace>self.bombsNear</replace>
       <replace>vButtonSize</replace>
+      <replace>vBoardSize + 3</replace>
+      <replace>vBoardSize + 20</replace>
+      <replace>vBoardSize + 1</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -412,26 +414,39 @@
       <option name="project" value="LOCAL" />
       <updated>1549398037298</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Started Beta Testing of the reszing feature">
+      <created>1549466219945</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1549466219945</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Started Beta Testing of the reszing feature">
+      <created>1549466852021</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1549466852021</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.122934565" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4990086" visible="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49834764" weight="0.32885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32885906" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5009914" side_tool="true" visible="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50165236" side_tool="true" visible="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -458,7 +473,8 @@
     <MESSAGE value="Fixing middleClick flag problems" />
     <MESSAGE value="Bulding Zip" />
     <MESSAGE value="Bulding" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bulding" />
+    <MESSAGE value="Started Beta Testing of the reszing feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started Beta Testing of the reszing feature" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -466,12 +482,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>631</line>
+          <line>636</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>541</line>
+          <line>546</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
@@ -665,12 +681,11 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="live-pycharm">
         <state>
-          <first_editor relative-caret-position="350">
-            <caret line="146" column="30" selection-start-line="146" selection-start-column="30" selection-end-line="146" selection-end-column="30" />
+          <first_editor relative-caret-position="2775">
+            <caret line="322" column="115" selection-start-line="322" selection-start-column="115" selection-end-line="322" selection-end-column="115" />
             <folding>
-              <marker date="1549465844028" expanded="true" signature="7128:7129" ph="..." />
-              <marker date="1549465844028" expanded="true" signature="19211:21444" ph="..." />
-              <marker date="1549465844028" expanded="false" signature="22978:22983" ph="..." />
+              <marker date="1549468426955" expanded="true" signature="19284:21517" ph="..." />
+              <marker date="1549468426955" expanded="false" signature="23051:23056" ph="..." />
             </folding>
           </first_editor>
           <second_editor relative-caret-position="-119" />

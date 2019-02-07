@@ -6,10 +6,16 @@ f = Frame()
 width=f.winfo_width()
 height=f.winfo_height()
 '''
+'''
+Ways to solve problems:
+High scores: Create a dictionary from a csv file with the code learned in Hemda. If dictionary is None create a new one
+Screen resizing: Measure in paint.net the correct ratio between them and also detect changes in width, change over what 
+was changed the most. For when, make it a key, like "R" for example.
+And make a custom board setting!!! its Easyy!!!!
+'''
 patch = \
 '''
 Version = 1.0B
-I plan on making a thread that checks size evry 0.1 seconds and if size changed then it should resize the widgets
 '''
 '''
 Naming System:
@@ -148,8 +154,7 @@ def resize():
     height = main.winfo_height()
     width = main.winfo_width()
     if height != vWindowSize:
-        if (height + 0.2) > width:
-            main.geometry(("%dX%d" % (height + 0.2, height)))
+        vWindowSize = height
         vWindowSize = height
         vButtonSize = aBoard[0][0].Button.winfo_height()
         pOne = ImageTk.PhotoImage(Image.open("images/one.png").resize((vButtonSize, vButtonSize), Image.ANTIALIAS))
@@ -171,6 +176,7 @@ def resize():
             for self in i:
                 if self.isClicked:
                     vNumBombs = self.bombsNear
+                    self.Button.configure(height=height / (vBoardSize + 1), width=height / (vBoardSize + 1))
                     if vNumBombs == 1:
                         self.Button.configure(image=pOne)
                         self.image = pOne
@@ -200,7 +206,9 @@ def resize():
                         self.image = pEmpty
                 else:
                     self.Button.configure(image=pUnpressed)
-                self.Button.configure(height=height / (vBoardSize + 1), width=height / (vBoardSize + 1))
+        main.geometry(("%dx%d" % (fGame.winfo_height() + 0.2, fGame.winfo_height())))
+
+
 
 def  update(a):
     global lTimePassed
@@ -308,6 +316,7 @@ def setboards(): # Working
     global vStartBombs
     global fGame
     global fInfo
+    global vWindowSize
     vFlagsLeft = vStartBombs
     height = fGame.winfo_reqheight()
     fGame.destroy()
@@ -319,7 +328,8 @@ def setboards(): # Working
             a = Tile()
             a.xPos = i
             a.yPos = j
-            a.Button = Button(fGame,height = height/vBoardSize, width = height/vBoardSize,image = pUnpressed)
+            a.Button = Button(fGame, height=vWindowSize / (vBoardSize + 1), width=vWindowSize / (vBoardSize + 1),
+                              image=pUnpressed)
             a.Button.bind("<Button-1>",leftclickbutton)
             a.Button.bind("<Button-3>",rightclick)
             a.Button.bind("<Button-2>",middleClick)
