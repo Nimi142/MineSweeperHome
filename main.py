@@ -1,4 +1,4 @@
-isDebug = False
+isDebug = True
 vBuild = 3
 '''
 Note:
@@ -34,10 +34,12 @@ Photo = pX
 Dictionary = dX
 constants = cX
 Time(Number) = tX
+Entry = eX
 '''
 from tkinter import *
+import PIL
 from PIL import Image, ImageTk
-import random,time,linecache
+import random, time, linecache, csv
 from os import stat
 from _thread import start_new_thread
 from math import ceil
@@ -67,11 +69,13 @@ main.iconbitmap(r'c:images/logo.ico')
 
 # main.attributes("-fullscreen", True)
 
+wSetPlayer = Toplevel(main)
 wConfigure = Toplevel(main)
 wLost = Toplevel(main)
 wWin = Toplevel(main)
 fGame = Frame(main)
 fInfo = Frame(main)
+wSetPlayer.withdraw()
 wLost.withdraw()
 wWin.withdraw()
 main.withdraw()
@@ -92,21 +96,23 @@ class Tile:
     isClicked = False
     image = None
 # Initializing variables:
+dBombs = {}
+sName = "Set_Name"
 vDifficulty = 0
 vStartBombs = 10
 vBoardSize = 9
-aBoard = []
-aBombs = []
-dBombs = {}
 vClicks = 0
 tStartTime = 0
 tFullTime = 0
 vFlagsLeft = 0
-aHighScores = []
 vHighClicks = 0
 vHightime = 0
 vWindowSize = 0
+aBoard = []
+aBombs = []
 aData = []
+aNames = []
+aHighScores = []
 isStart = False
 isRetry = False
 isStop = False
@@ -127,6 +133,19 @@ pUnpressed = ImageTk.PhotoImage(Image.open("images/Unpressed.png").resize((vSide
 pFlagBomb = ImageTk.PhotoImage(Image.open("images/FlaggedBomb.png").resize((vSide,vSide), Image.ANTIALIAS))
 
 #Functions:
+def setplayer():
+    global eSetPlayer
+    global wSetPlayer
+    global sName
+    global lPlayer
+    sName = eSetPlayer.get()
+    wSetPlayer.withdraw()
+    lPlayer.configure(text=sName)
+
+
+def openplayer():
+    global wSetPlayer
+    wSetPlayer.deiconify()
 def exitfullscreen(event = None):
     global main
     main.attributes("-fullscreen",False)
@@ -233,6 +252,7 @@ def choosedifficulty(self,vDifficulty,event,isRetry):
     global vHighClicks
     global vHightime
     global aData
+    global aNames
     global vSide
     global pOne
     global pTwo
@@ -249,8 +269,12 @@ def choosedifficulty(self,vDifficulty,event,isRetry):
     global pFlagBomb
     # Github Thingy
     # print("Meow!")
-    HighScoreFile = open("HighScores.txt","r")
-    aData = HighScoreFile.readlines()
+    file_name = 'HighScores.csv'
+    file = open(file_name, 'r')
+    data = list(csv.DictReader(file))
+    print(data)
+    for i in data:
+        aNames.append(i['name'])
     if vDifficulty == 0:
         vStartBombs = 10
         vBoardSize = 9
@@ -284,14 +308,7 @@ def choosedifficulty(self,vDifficulty,event,isRetry):
     # print(aBombs)
     tStartTime = time.time()
     setboards()
-    aHighScores = linecache.getline("HighScores.txt",vDifficulty+1).split(',')
-    vHightime = aHighScores[0]
-    vHighClicks = aHighScores[1]
     # print(str(aHighScores[0]) + "," + str(aHighScores[1]))
-    for i in range(0,2):
-        aHighScores[i] = float(aHighScores[i])
-    lHighScore.configure(text = "Least clicks: " + str(aHighScores[1]) + "\nLeast Time: " + str(round(aHighScores[0],2)))
-    HighScoreFile.close()
 def setbombs(vStartBombs,vBoardSize,aForbiddenTiles): # Working
     global aBombs
     # Picks a random streak of points at a size predetermined by the difficulty that will be bombs
@@ -364,6 +381,9 @@ def leftclickbutton(event,isBombSent = False):
     global lFlagsLeft
     global vClicks
     global vDifficulty
+    global bOpenPlayer
+    global sName
+    global aNames
     if type(event) is not Tile:
         realself = dBombs[event.widget]
         vClicks += 1
@@ -381,6 +401,16 @@ def leftclickbutton(event,isBombSent = False):
                 aForbiddenTiles.append([vxPos+i,vyPos+j])
         setbombs(vStartBombs,vBoardSize,aForbiddenTiles)
         setboards()
+        bOpenPlayer.configure(state=DISABLED)
+        print(aNames[sName])
+        if vDifficulty == 0:
+            lHighScore.configure(text=str(aNames[sName][0]) + "\n" + str(aNames[sName][1]))
+        elif vDifficulty == 1:
+            lHighScore.configure(text=str(aNames[sName][2]) + "\n" + str(aNames[sName][3]))
+        elif vDifficulty == 2:
+            lHighScore.configure(text=str(aNames[sName][4]) + "\n" + str(aNames[sName][5]))
+        else:
+            lHighScore.configure(text=str(aNames[sName][6]) + "\n" + str(aNames[sName][7]))
     isStart = True
     if realself.bombsNear == 0:
         for x in range(-1,2):
@@ -596,6 +626,7 @@ def resetboard():
     global aBoard
     global aBombs
     global dBombs
+    global bOpenPlayer
     global vClicks
     global isStart
     isStart = False
@@ -611,6 +642,7 @@ def resetboard():
     wLost.withdraw()
     wLost.grab_release()
     wWin.withdraw()
+    bOpenPlayer.configure(state="normal")
 def checkwin():
     global aBoard
     isRight = True
@@ -634,6 +666,7 @@ def won():
     global vDifficulty
     global lHighScore
     global isRetry
+    global bOpen
     isRetry = True
     main.withdraw()
     wWin.deiconify()
@@ -646,12 +679,23 @@ def won():
     aData[vDifficulty] = str(aHighScores[0]) + "," + str(aHighScores[1]) + '\n'
     lHighScore.configure(text = "Least clicks: " + str(aHighScores[1]) + "\nLeast Time: " + str(round(aHighScores[0])))
     lHighScore.pack()
+    bOpenPlayer.configure(state="normal")
     # print("Unready")
     w = open("HighScores.txt","w")
     # print(aData)
     w.writelines(aData)
+
+
 # Binding exit full screen
 # main.bind("<Escape>",exitfullscreen)
+# Setting wSetPlayer:
+lSetPlayer = Label(wSetPlayer, text="Enter player name:")
+eSetPlayer = Entry(wSetPlayer)
+bSetPlayer = Button(wSetPlayer, text="Finish", command=setplayer)
+lSetPlayer.pack()
+eSetPlayer.pack()
+bSetPlayer.pack()
+
 # Setting wLost:
 bPlayLost = Button(wLost,text = "Play again!", command = resetboard)
 lLost = Label(wLost,text = "welp: ")
@@ -687,12 +731,16 @@ fGame.pack(side = LEFT,expand = 1,fill = BOTH)
 fInfo.pack(side = LEFT)
 # print(aBombs)
 # Setting fInfo:
+lPlayer = Label(fInfo, text=sName)
+bOpenPlayer = Button(fInfo, text="Set Name", command=openplayer)
 lBuild = Label(fInfo, text="Build: " + str(vBuild), anchor=W)
 lClicks = Label(fInfo, text="Clicks: " + str(vClicks), anchor=W)
 lTimePassed = Label(fInfo, text="Time passed: " + str((time.time() - tStartTime)), anchor=W)
 lFlagsLeft = Label(fInfo, text="flags left: 10", anchor=W)
 lHighScore = Label(fInfo, text="", anchor=W, justify=LEFT)
 bResize = Button(fInfo, text="Resize Board", anchor=W, command=resize)
+lPlayer.pack(anchor=W)
+bOpenPlayer.pack(anchor=W)
 lBuild.pack(anchor=W)
 lClicks.pack(anchor=W)
 lTimePassed.pack(anchor=W)
@@ -705,15 +753,3 @@ main.after(0, setIsStop())
 start_new_thread(update,(5,))
 print(fInfo.winfo_width())
 main.mainloop()
-'''
-import win32api, win32con
-def lClick(x,y):
-    win32api.SetCursorPos((x,y))
-    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,x,y,0,0)
-    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,x,y,0,0)
-def rClick(x,y):
-    win32api.SetCursorPos((x,y))
-    win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN,x,y,0,0)
-    win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP,x,y,0,0)
-lclick(10,10)
-'''
