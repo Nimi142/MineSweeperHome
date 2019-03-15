@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02724f98-fa0f-44d8-944c-966ab5b73d27" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/MineSweeperHome.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MineSweeperHome.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HighScores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HighScores.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,68 +13,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="154860312">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="9" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="README" value="1" />
-          <entry key="csv" value="2" />
-          <entry key="ppm" value="10" />
-          <entry key="py" value="31" />
-          <entry key="txt" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSV" value="1" />
-          <entry key="Image" value="10" />
-          <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="32" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="csv" value="337" />
-          <entry key="py" value="19120" />
-          <entry key="txt" value="887" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSV" value="337" />
-          <entry key="PLAIN_TEXT" value="887" />
-          <entry key="Python" value="19120" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="live-pycharm">
             <state>
-              <first_editor relative-caret-position="221">
-                <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+              <first_editor relative-caret-position="155">
+                <caret line="728" column="33" selection-start-line="728" selection-start-column="33" selection-end-line="728" selection-end-column="33" />
                 <folding>
-                  <marker date="1549564990151" expanded="true" signature="3644:3817" ph="..." />
-                  <marker date="1549564990151" expanded="true" signature="3834:3839" ph="..." />
-                  <marker date="1549564990151" expanded="true" signature="3834:3884" ph="..." />
-                  <marker date="1549564990151" expanded="true" signature="20321:22554" ph="..." />
-                  <marker date="1549564990151" expanded="true" signature="24215:24220" ph="..." />
+                  <element signature="e#791#812#0" expanded="true" />
+                  <marker date="1552083422950" expanded="true" signature="3648:3820" ph="..." />
+                  <marker date="1552083422950" expanded="true" signature="3837:3842" ph="..." />
+                  <marker date="1552083422950" expanded="true" signature="3837:3887" ph="..." />
+                  <marker date="1552083422950" expanded="true" signature="20332:22565" ph="..." />
+                  <marker date="1552083422950" expanded="true" signature="24223:24228" ph="..." />
                 </folding>
               </first_editor>
               <second_editor relative-caret-position="-119" />
@@ -83,18 +37,18 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HighScores.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Example.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
     </leaf>
@@ -108,10 +62,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>leftclickBomb</find>
-      <find>fullscreen</find>
-      <find>for</find>
-      <find>right</find>
       <find>middle</find>
       <find>stick</find>
       <find>side</find>
@@ -138,6 +88,10 @@
       <find>setboa</find>
       <find>isStart</find>
       <find>str(aNames[sName][1])</find>
+      <find>thread</find>
+      <find>name</find>
+      <find>eSetPlayer</find>
+      <find>pack(</find>
     </findStrings>
     <replaceStrings>
       <replace>changedif</replace>
@@ -167,6 +121,7 @@
       <replace>vBoardSize + 3</replace>
       <replace>vBoardSize + 20</replace>
       <replace>vBoardSize + 1</replace>
+      <replace>pack(fill = BOTH,</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -187,10 +142,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="475" />
-    <option name="y" value="185" />
-    <option name="width" value="980" />
-    <option name="height" value="1080" />
+    <option name="x" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1089" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -198,6 +152,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,17 +160,21 @@
               <item name="MineSweeperHome" type="b2602c69:ProjectViewProjectNode" />
               <item name="MineSweeperHome" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MineSweeperHome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MineSweeperHome" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/rappa/Python36/Lib/random.py" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.CVS" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -237,7 +196,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\rappa\Python36\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\rappa\AppData\Local\Programs\Python\Python37\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -452,18 +411,26 @@
       <option name="project" value="LOCAL" />
       <updated>1549559094101</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Testing Shit">
+      <created>1549663066614</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1549663066614</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.122934565" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12285337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49966952" weight="0.32885906" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4970258" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4970258" weight="0.33065596" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49966952" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -476,9 +443,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Meow, Test" />
@@ -499,7 +463,8 @@
     <MESSAGE value="Bulding" />
     <MESSAGE value="Started Beta Testing of the reszing feature" />
     <MESSAGE value="Adding notes to main.py about how to solve my problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding notes to main.py about how to solve my problems" />
+    <MESSAGE value="Testing Shit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing Shit" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -507,12 +472,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>676</line>
+          <line>677</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>583</line>
+          <line>584</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
@@ -590,26 +555,8 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Python36/Lib/random.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state>
-          <first_editor relative-caret-position="31">
-            <caret line="221" selection-start-line="221" selection-end-line="221" />
-          </first_editor>
-          <second_editor relative-caret-position="-119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Python36/Lib/traceback.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state>
-          <first_editor relative-caret-position="320">
-            <caret line="348" selection-start-line="348" selection-end-line="348" />
-          </first_editor>
-          <second_editor relative-caret-position="-119" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Python36/Lib/random.py" />
+    <entry file="file://$USER_HOME$/Python36/Lib/traceback.py" />
     <entry file="file://$PROJECT_DIR$/Four.ppm" />
     <entry file="file://$PROJECT_DIR$/Three.ppm" />
     <entry file="file://$PROJECT_DIR$/One.ppm" />
@@ -635,57 +582,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Python36/Lib/_bootlocale.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state>
-          <first_editor relative-caret-position="204">
-            <caret line="13" selection-start-line="13" selection-end-line="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Python36/Lib/codecs.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state>
-          <first_editor relative-caret-position="174">
-            <caret line="194" selection-start-line="194" selection-end-line="194" />
-          </first_editor>
-          <second_editor relative-caret-position="-119" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Python36/Lib/_bootlocale.py" />
+    <entry file="file://$USER_HOME$/Python36/Lib/codecs.py" />
     <entry file="file://$PROJECT_DIR$/Bomb.ppm" />
-    <entry file="file://$USER_HOME$/Python36/Lib/re.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state>
-          <first_editor relative-caret-position="3723">
-            <caret line="222" selection-start-line="222" selection-end-line="222" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Python36/Lib/sre_compile.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state>
-          <first_editor relative-caret-position="12937">
-            <caret line="763" selection-start-line="763" selection-end-line="763" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Python36/Lib/sre_parse.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state>
-          <first_editor relative-caret-position="15708">
-            <caret line="924" selection-start-line="924" selection-end-line="924" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Python36/Lib/re.py" />
+    <entry file="file://$USER_HOME$/Python36/Lib/sre_compile.py" />
+    <entry file="file://$USER_HOME$/Python36/Lib/sre_parse.py" />
     <entry file="file://$USER_HOME$/Python36/Lib/tkinter/__init__.py">
       <provider selected="true" editor-type-id="live-pycharm">
         <state>
@@ -707,14 +609,15 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="live-pycharm">
         <state>
-          <first_editor relative-caret-position="221">
-            <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+          <first_editor relative-caret-position="155">
+            <caret line="728" column="33" selection-start-line="728" selection-start-column="33" selection-end-line="728" selection-end-column="33" />
             <folding>
-              <marker date="1549564990151" expanded="true" signature="3644:3817" ph="..." />
-              <marker date="1549564990151" expanded="true" signature="3834:3839" ph="..." />
-              <marker date="1549564990151" expanded="true" signature="3834:3884" ph="..." />
-              <marker date="1549564990151" expanded="true" signature="20321:22554" ph="..." />
-              <marker date="1549564990151" expanded="true" signature="24215:24220" ph="..." />
+              <element signature="e#791#812#0" expanded="true" />
+              <marker date="1552083422950" expanded="true" signature="3648:3820" ph="..." />
+              <marker date="1552083422950" expanded="true" signature="3837:3842" ph="..." />
+              <marker date="1552083422950" expanded="true" signature="3837:3887" ph="..." />
+              <marker date="1552083422950" expanded="true" signature="20332:22565" ph="..." />
+              <marker date="1552083422950" expanded="true" signature="24223:24228" ph="..." />
             </folding>
           </first_editor>
           <second_editor relative-caret-position="-119" />
@@ -722,10 +625,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HighScores.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
@@ -733,10 +636,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Example.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
   </component>
 </project>

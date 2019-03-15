@@ -1,4 +1,4 @@
-isDebug = True
+isDebug = False
 vBuild = 3
 '''
 Note:
@@ -37,7 +37,6 @@ Time(Number) = tX
 Entry = eX
 '''
 from tkinter import *
-import PIL
 from PIL import Image, ImageTk
 import random, time, linecache, csv
 from os import stat
@@ -402,15 +401,15 @@ def leftclickbutton(event,isBombSent = False):
         setbombs(vStartBombs,vBoardSize,aForbiddenTiles)
         setboards()
         bOpenPlayer.configure(state=DISABLED)
-        print(aNames[sName])
-        if vDifficulty == 0:
-            lHighScore.configure(text=str(aNames[sName][0]) + "\n" + str(aNames[sName][1]))
-        elif vDifficulty == 1:
-            lHighScore.configure(text=str(aNames[sName][2]) + "\n" + str(aNames[sName][3]))
-        elif vDifficulty == 2:
-            lHighScore.configure(text=str(aNames[sName][4]) + "\n" + str(aNames[sName][5]))
-        else:
-            lHighScore.configure(text=str(aNames[sName][6]) + "\n" + str(aNames[sName][7]))
+        # print(aNames[sName])
+        # if vDifficulty == 0:
+        #     lHighScore.configure(text=str(aNames[sName][0]) + "\n" + str(aNames[sName][1]))
+        # elif vDifficulty == 1:
+        #     lHighScore.configure(text=str(aNames[sName][2]) + "\n" + str(aNames[sName][3]))
+        # elif vDifficulty == 2:
+        #     lHighScore.configure(text=str(aNames[sName][4]) + "\n" + str(aNames[sName][5]))
+        # else:
+        #     lHighScore.configure(text=str(aNames[sName][6]) + "\n" + str(aNames[sName][7]))
     isStart = True
     if realself.bombsNear == 0:
         for x in range(-1,2):
@@ -727,7 +726,7 @@ bDiffIntermediate.pack(side = LEFT)
 bDiffExpert.pack(side = LEFT)
 # Setting main:
 # setting Board:
-fGame.pack(side = LEFT,expand = 1,fill = BOTH)
+fGame.pack(side = LEFT,expand = 1)
 fInfo.pack(side = LEFT)
 # print(aBombs)
 # Setting fInfo:
